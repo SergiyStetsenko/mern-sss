@@ -4,12 +4,12 @@
   "description": "Mern stack",
   "main": "app.js",
   "scripts": {
-    "start": " node app.js",
+    "start": " node cross-env NODE_ENV=production  app.js",
     "server": "nodemon app.js",
     "client": "node npm run start --prefix react_repeat",
     "client:install": "npm install --prefix react_repeat",
     "client:build": "npm run build --prefix react_repeat",
-    "dev": " node concurrently \"npm run server\" \"npm run client\""
+    "dev": "cross-env NODE_ENV=production concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [
     "mern"
