@@ -16,15 +16,14 @@ app.use("/api/auth", authRouter);
 app.use("/api/link", linkRouter);
 app.use("/t", redirectRouter);
 
-if (process.env.NODE_ENV === "production") {
-  app.use("/", express.static(path.join(__dirname, "react_repeat", "build")));
+app.use("/", express.static(path.join(__dirname, "react_repeat", "build")));
 
-  app.get("*", (req, res) => {
-    res.sendFile(
-      path.resolve(__dirname, "react_repeat", "build", "index.html")
-    );
-  });
-}
+// app.get("*", (req, res) => {
+//     res.sendFile(
+//       path.resolve(__dirname, "react_repeat", "build", "index.html")
+//     );
+//   });
+
 async function start() {
   try {
     await mongoose.connect(config.get("mongoURI"), {
