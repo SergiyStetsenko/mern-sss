@@ -9,7 +9,7 @@
     "client": "node npm run start --prefix react_repeat",
     "client:install": "npm install --prefix react_repeat",
     "client:build": "npm run build --prefix react_repeat",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": " node concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [
     "mern"
