@@ -2,7 +2,7 @@
   "name": "fullstack",
   "version": "1.0.0",
   "description": "Mern stack",
-  "master": "app.js",
+  "main": "app.js",
   "scripts": {
     "start": " node cross-env NODE_ENV=production node app.js",
     "server": "nodemon app.js",
