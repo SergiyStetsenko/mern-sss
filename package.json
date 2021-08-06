@@ -1,0 +1,33 @@
+{
+  "name": "fullstack",
+  "version": "1.0.0",
+  "description": "Mern stack",
+  "master": "app.js",
+  "scripts": {
+    "start": " node cross-env NODE_ENV=production node app.js",
+    "server": "nodemon app.js",
+    "client": " node npm run start --prefix react_repeat",
+    "client:install": " npm install --prefix react_repeat",
+    "client:build": " npm run build --prefix react_repeat",
+    "dev": "cross-env NODE_ENV=production concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "mern"
+  ],
+  "author": "Serhii Stetsenko <serhiistetsenko2021@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.5",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.12"
+  }
+}
