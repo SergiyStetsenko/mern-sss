@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "production") {
   app.use("/", express.static(path.join(__dirname, "react_repeat", "build")));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname,"react_repeat","build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "react_repeat", "build", "index.html"));
   });
 }
 console.log("process.env.MONGO_URI", process.env.MONGO_URI);
