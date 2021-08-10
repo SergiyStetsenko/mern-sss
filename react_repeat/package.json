@@ -25,7 +25,7 @@
       "react-app/jest"
     ]
   },
-  
+  "proxy": "https://guarded-stream-30561.herokuapp.com",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -37,6 +37,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": "https://guarded-stream-30561.herokuapp.com"
+  }
+  
 }
