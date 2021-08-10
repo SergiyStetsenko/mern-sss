@@ -11,8 +11,8 @@ const PORT = process.env.PORT || 3002;
 // прослойка которая связывет бек и фронт чтобы фронт увидел body
 app.use(express.json({ extended: true }));
 // регистрация роутов
-app.use("https://guarded-stream-30561.herokuapp.com/api/auth", authRouter);
-app.use("https://guarded-stream-30561.herokuapp.com/api/link", linkRouter);
+app.use("/api/auth", authRouter);
+app.use("/api/link", linkRouter);
 app.use("/t", redirectRouter);
 
 if (process.env.NODE_ENV === "production") {
