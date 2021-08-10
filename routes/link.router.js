@@ -1,14 +1,13 @@
 const { Router } = require("express");
-const config = require("config");
 const Link = require("../models/Link");
 const shortid = require("shortid");
-
+require("dotenv").config();
 const auth = require("../middlewere/auth.middleware");
 const router = Router();
 
 router.post("/generate", auth, async (req, res) => {
   try {
-    const baseUrl = config.get("baseUrl");
+    const baseUrl = process.env.BASE_URL;
     // редирект пользователя
     const { from } = req.body;
     // получаем уникальный код

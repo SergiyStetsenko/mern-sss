@@ -1,5 +1,5 @@
 const  jwt = require('jsonwebtoken')
-const config = require('config')
+require('dotenv').config()
 
 //   мидел веа это обичная функция (прослойка)которая позволяет перехватывать данные и делать логику
 
@@ -15,7 +15,7 @@ module.exports = (req, res, next)=>{
           return res.status(401).json({message: 'not authorization'})
         }
         // если токен есть для этого нам нужно его раскодировать
-        const decoded = jwt.verify(token , config.get('jwtSecret'))
+        const decoded = jwt.verify(token , process.env.JWT_SECRET)
         req.user = decoded
         next()
     } catch (error) {

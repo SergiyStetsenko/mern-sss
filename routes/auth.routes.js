@@ -1,11 +1,10 @@
 const { Router } = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const config = require("config");
 const { check, validationResult } = require("express-validator");
 const User = require("../models/User");
 const router = Router();
-
+require("dotenv").config();
 // /api/auth/register
 
 router.post(
@@ -75,7 +74,7 @@ router.post(
       }
 
       // авторизация
-      const token = jwt.sign({ userId: user.id }, config.get("jwtSecret"), {
+      const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, {
         expiresIn: "5h",
       });
       res.json({

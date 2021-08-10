@@ -1,7 +1,0 @@
-{
-    "port": 5000,
-    "jwtSecret": "wererei",
-    "mongoURI": "mongodb+srv://serhii:()1234qwer@cluster0.mscor.mongodb.net/app?retryWrites=true&w=majority",
-    "baseUrl": "http://localhost:5000"
-
-}
