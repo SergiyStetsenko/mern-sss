@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node app.js",
     "client": "npm run start --prefix react_repeat",
+    "client:build": "npm run build --prefix react_repeat",
     "dev": "concurrently \"npm run start\" \"npm run client\""
   },
   "keywords": [
