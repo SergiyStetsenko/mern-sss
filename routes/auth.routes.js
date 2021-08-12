@@ -39,9 +39,10 @@ router.post(
       //    сохранения пользователя
       await user.save();
 
-      res.status(201).json({ message: "user added" });
+      return res.status(201).json({ message: "user added" });
     } catch (error) {
-      res.status(500).json({ message: "Warning Server" });
+      // проверяем работу сервера
+      return res.status(500).json({ message: "Warning Server" });
     }
   }
 );
