@@ -2,10 +2,12 @@
   "name": "react_repeat",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://guarded-stream-30561.herokuapp.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.1",
     "materialize-css": "^1.0.0-rc.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -25,7 +27,6 @@
       "react-app/jest"
     ]
   },
-  "proxy": "https://guarded-stream-30561.herokuapp.com",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -38,5 +39,4 @@
       "last 1 safari version"
     ]
   }
-  
 }

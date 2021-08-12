@@ -3,6 +3,7 @@ import { AuthContext } from "../context/AuthContext";
 import { useHttp } from "../hooks/http.hook";
 import { useMessage } from "../hooks/message.hook";
 
+
 export const AuthPage = () => {
   const auth = useContext(AuthContext);
   const message = useMessage();

@@ -7,7 +7,9 @@
   "description": "Mern stack",
   "master": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "client": "npm run start --prefix react_repeat",
+    "dev": "concurrently \"npm run start\" \"npm run client\""
   },
   "keywords": [
     "mern"
@@ -16,6 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "concurrently": "^6.2.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-validator": "^6.12.1",
