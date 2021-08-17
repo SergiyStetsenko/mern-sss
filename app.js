@@ -14,6 +14,9 @@ app.use(express.json({ extended: true }));
 app.use("/api/auth", authRouter);
 app.use("/api/link", linkRouter);
 app.use("/t", redirectRouter);
+app.get('/connection',(req, res)=>{
+  res.json(mongoose.connection.readyState)
+})
 
 if (process.env.NODE_ENV === "production") {
   app.use("/", express.static(path.join(__dirname, "react_repeat", "build")));
@@ -35,9 +38,7 @@ async function start() {
       },
       () => console.log(`DB connect....`)
     );
-    app.get('/connection',(req, res)=>{
-      res.json(mongoose.connection.readyState)
-    })
+    
     app.listen(PORT, () => {
       console.log(`App hes been started on port ${PORT}....`);
     });
