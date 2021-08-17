@@ -35,6 +35,9 @@ async function start() {
       },
       () => console.log(`DB connect....`)
     );
+    app.get('/connection',(req, res)=>{
+      res.json(mongoose.connection.readyState)
+    })
     app.listen(PORT, () => {
       console.log(`App hes been started on port ${PORT}....`);
     });
