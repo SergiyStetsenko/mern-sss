@@ -42,7 +42,8 @@ router.post(
       return res.status(201).json({ message: "user added" });
     } catch (error) {
       // проверяем работу сервера
-      return res.status(500).json({ message: "Warning Server" });
+      // return res.status(500).json({ message: error.message });
+      return res.status(500).json({ message: error.message });
     }
   }
 );
