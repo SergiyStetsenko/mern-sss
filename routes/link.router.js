@@ -17,7 +17,7 @@ router.post("/generate", auth, async (req, res) => {
     if (existing) {
       return res.json({ link: existing });
     }
-    const to = "https://guarded-stream-30561.herokuapp.com/" + "/t/" + code;
+    const to = "https://guarded-stream-30561.herokuapp.com" + "/t/" + code;
     const link = new Link({
       code,
       to,
