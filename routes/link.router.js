@@ -7,7 +7,7 @@ const router = Router();
 
 router.post("/generate", auth, async (req, res) => {
   try {
-    const baseUrl = process.env.BASE_URL;
+    // const baseUrl = process.env.BASE_URL;
     // редирект пользователя
     const { from } = req.body;
     // получаем уникальный код
@@ -17,7 +17,7 @@ router.post("/generate", auth, async (req, res) => {
     if (existing) {
       return res.json({ link: existing });
     }
-    const to = baseUrl + "/t/" + code;
+    const to = "https://guarded-stream-30561.herokuapp.com" + "/t/" + code;
     const link = new Link({
       code,
       to,
