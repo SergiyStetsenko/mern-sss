@@ -11,7 +11,7 @@ router.get("/:code", async (req, res) => {
       await link.save();
       return res.redirect(link.from);
     }
-    res.status(404).json({ message: "Url error" });
+    res.status(404).json({ message: error.message });
   } catch (error) {
     res.status(500).json({ message: "Warning Server" });
   }
